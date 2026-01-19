@@ -137,13 +137,11 @@ app_license = "mit"
 # ---------------
 # Hook on document methods and events
 
-# doc_events = {
-# 	"*": {
-# 		"on_update": "method",
-# 		"on_cancel": "method",
-# 		"on_trash": "method"
-# 	}
-# }
+doc_events = {
+	"Salary Slip": {
+		"before_insert": "globcom_hr_custom.globcom_hr_custom.api.salary_slip.set_overtime_hours"
+	}
+}
 
 # Scheduled Tasks
 # ---------------
@@ -247,3 +245,21 @@ app_license = "mit"
 # List of apps whose translatable strings should be excluded from this app's translations.
 # ignore_translatable_strings_from = []
 
+fixtures = [
+	{
+		"dt": "Custom Field",
+		"filters": [
+			[
+				"module", "in", ["Globcom Hr Custom"]
+			]
+		]
+	},
+	{
+		"dt": "Property Setter",
+		"filters": [
+			[
+				"module", "in", ["Globcom Hr Custom"]
+			]
+		]
+	}
+]
