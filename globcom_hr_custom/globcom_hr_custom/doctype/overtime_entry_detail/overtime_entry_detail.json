@@ -7,6 +7,7 @@
  "engine": "InnoDB",
  "field_order": [
   "employee",
+  "employee_name",
   "date",
   "column_break_gkgc",
   "overtime_hrs"
@@ -36,13 +37,20 @@
    "in_list_view": 1,
    "label": "Overtime Hrs",
    "reqd": 1
+  },
+  {
+   "fetch_from": "employee.employee_name",
+   "fieldname": "employee_name",
+   "fieldtype": "Data",
+   "label": "Employee Name",
+   "read_only": 1
   }
  ],
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "istable": 1,
  "links": [],
- "modified": "2026-01-19 09:11:20.555189",
+ "modified": "2026-01-20 09:02:24.455560",
  "modified_by": "Administrator",
  "module": "Globcom Hr Custom",
  "name": "Overtime Entry Detail",
