@@ -140,6 +140,9 @@ app_license = "mit"
 doc_events = {
 	"Salary Slip": {
 		"before_insert": "globcom_hr_custom.globcom_hr_custom.api.salary_slip.set_overtime_hours"
+	},
+	"Salary Structure Assignment": {
+		"validate": "globcom_hr_custom.globcom_hr_custom.api.salary_structure_assignment.calculate_total_earning"
 	}
 }
 
